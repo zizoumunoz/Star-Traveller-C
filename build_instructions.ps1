@@ -32,3 +32,7 @@ elseif ($Mode -eq "release") {
     cl main.c /Fe:$releaseDir\$Target.exe /Fo:$releaseDir\$Target.obj
     Write-Host "✅ Compiled in release mode." -ForegroundColor Green
 }
+else
+{
+    Write-Host "❌ Failed: Input a build mode with -Mode" -ForegroundColor Red
+}
