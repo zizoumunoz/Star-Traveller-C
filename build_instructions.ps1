@@ -13,14 +13,22 @@ $debugDir = "$buildDir\debug"
 $releaseDir = "$buildDir\release"
 
 $debugArgs = @(
+    "/Iinclude",                     # tell compiler to look for includes(I) in a folder called include(include)
     "src\main.c",
     "/Fe:$debugDir\$Target.exe",
-    "/Fo:$debugDir\$Target.obj"
+    "/Fo:$debugDir\$Target.obj",
+    "/link",                        # indicates linker instruction start
+    "/LIBPATH:lib",
+    "BearLibTerminal.lib"
 )
 $releaseArgs = @(
     "src\main.c",
+    "/Iinclude",
     "/Fe:$releaseDir\$Target.exe",
-    "/Fo:$releaseDir\$Target.obj"
+    "/Fo:$releaseDir\$Target.obj",
+    "/link",
+    "/LIBPATH:lib",
+    "BearLibTerminal.lib"
 )
 
 Write-Host "Attempting build..." -ForegroundColor Yellow
