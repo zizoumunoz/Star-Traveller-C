@@ -5,13 +5,23 @@ param
     [string]$Target = "StarTravellerC"
 )
 
-
 # check/create build folder
 
 # variables
 $buildDir = "build"
 $debugDir = "$buildDir\debug"
 $releaseDir = "$buildDir\release"
+
+$debugArgs = @(
+    "src\main.c",
+    "/Fe:$debugDir\$Target.exe",
+    "/Fo:$debugDir\$Target.obj"
+)
+$releaseArgs = @(
+    "src\main.c",
+    "/Fe:$releaseDir\$Target.exe",
+    "/Fo:$releaseDir\$Target.obj"
+)
 
 Write-Host "Attempting build..." -ForegroundColor Yellow
 
@@ -25,14 +35,13 @@ foreach ($dir in @($buildDir, $debugDir, $releaseDir)) {
 }
 
 if ($Mode -eq "debug") {
-    cl main.c /Fe:$debugDir\$Target.exe /Fo:$debugDir\$Target.obj
+    cl $debugArgs
     Write-Host "✅ Compiled in debug mode." -ForegroundColor Green
 }
 elseif ($Mode -eq "release") {
-    cl main.c /Fe:$releaseDir\$Target.exe /Fo:$releaseDir\$Target.obj
+    cl $releaseArgs
     Write-Host "✅ Compiled in release mode." -ForegroundColor Green
 }
-else
-{
+else {
     Write-Host "❌ Failed: Input a build mode with -Mode" -ForegroundColor Red
 }
