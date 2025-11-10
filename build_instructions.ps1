@@ -13,19 +13,23 @@ $debugDir = "$buildDir\debug"
 $releaseDir = "$buildDir\release"
 
 $debugArgs = @(
+    "/std:c++20",
     "/Iinclude",                     # tell compiler to look for includes(I) in a folder called include(include)
-    "src\main.c",
+    "src\main.cpp",
+    "src\MainMenu.cpp",
     "/Fe:$debugDir\$Target.exe",
-    "/Fo:$debugDir\$Target.obj",
+    "/Fo:$debugDir/",
     "/link",                        # indicates linker instruction start
     "/LIBPATH:lib",
     "BearLibTerminal.lib"
 )
 $releaseArgs = @(
-    "src\main.c",
+    "/std:c++20",
+    "src\main.cpp",
+    ".\src\MainMenu.cpp",
     "/Iinclude",
     "/Fe:$releaseDir\$Target.exe",
-    "/Fo:$releaseDir\$Target.obj",
+    "/Fo:$releaseDir/",
     "/link",
     "/LIBPATH:lib",
     "BearLibTerminal.lib"

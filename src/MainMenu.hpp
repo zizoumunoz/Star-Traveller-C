@@ -1,21 +1,14 @@
 #pragma once
+#include <iostream>
 
-typedef enum MenuOption
+namespace GameUI
 {
-    START_GAME,
-    SETTINGS,
-    HELP,
-    EXIT
-} MenuOption;
-
-typedef struct MainMenu
-{
-    MenuOption _currentOption;
-    void (*display_options)();
-    const char *menu_options[4] = {
-        "Start Game",
-        "Settings",
-        "Help",
-        "Exit"};
-
-} MainMenu;
+    class MainMenu
+    {
+    private:
+        /* data */
+    public:
+        MainMenu(/* args */);
+        ~MainMenu();
+    };
+}
