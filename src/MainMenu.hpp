@@ -9,7 +9,7 @@ namespace GameUI
     {
         StartGame,
         Options,
-        Help,
+        Help, 
         Exit
     };
 

@@ -13,7 +13,6 @@ int main()
 
     
     
-
     // terminal_open();
 
     // terminal_set("window: size=80x25");

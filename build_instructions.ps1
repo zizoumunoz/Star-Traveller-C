@@ -14,6 +14,7 @@ $releaseDir = "$buildDir\release"
 
 $debugArgs = @(
     "/std:c++20",
+    "/EHsc",
     "/Iinclude",                     # tell compiler to look for includes(I) in a folder called include(include)
     "src\main.cpp",
     "src\MainMenu.cpp",
@@ -25,6 +26,7 @@ $debugArgs = @(
 )
 $releaseArgs = @(
     "/std:c++20",
+    "/EHsc",
     "src\main.cpp",
     ".\src\MainMenu.cpp",
     "/Iinclude",
