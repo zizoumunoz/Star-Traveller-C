@@ -1,12 +1,18 @@
-#include <stdio.h>
+#include <iostream>
 #include "BearLibTerminal.h"
 #include "MainMenu.hpp"
 
 int main() 
 {
-    printf("Star Traveller C\n");
+    std::cout << "Star Traveller C";
 
-    GameUI::MainMenu();
+    GameUI::MainMenu mainMenu;
+
+    mainMenu.setMenuOption(GameUI::MenuOption::Options);
+    mainMenu.displayCurrentOption();
+
+    
+    
 
     // terminal_open();
 

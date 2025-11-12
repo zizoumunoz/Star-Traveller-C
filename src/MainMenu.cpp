@@ -10,3 +10,13 @@ MainMenu::MainMenu()
 MainMenu::~MainMenu()
 {
 }
+
+void GameUI::MainMenu::setMenuOption(MenuOption newOption)
+{
+    _currentOption = newOption;
+}
+
+void GameUI::MainMenu::displayCurrentOption()
+{
+    std::cout << _MenuOptions[_currentOption];
+}
