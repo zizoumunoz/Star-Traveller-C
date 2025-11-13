@@ -20,3 +20,9 @@ void GameUI::MainMenu::displayCurrentOption()
 {
     std::cout << _MenuOptions[_currentOption];
 }
+
+void GameUI::MainMenu::displayMenu()
+{
+    
+    
+}

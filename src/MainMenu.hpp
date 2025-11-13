@@ -9,7 +9,7 @@ namespace GameUI
     {
         StartGame,
         Options,
-        Help, 
+        Help,
         Exit
     };
 
@@ -20,6 +20,7 @@ namespace GameUI
         ~MainMenu();
 
         void setMenuOption(MenuOption x);
+        void displayMenu();
         void displayCurrentOption();
 
     private:

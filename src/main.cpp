@@ -13,8 +13,10 @@ int main()
 
     terminal_open();
 
-    terminal_set("window: size=100x30");
-    terminal_print(2, 1, "Hello, World!");
+    terminal_set("window: size=80x30");
+    
+    
+
 
     terminal_refresh();
     terminal_read();
