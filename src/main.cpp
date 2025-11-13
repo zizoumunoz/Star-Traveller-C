@@ -6,11 +6,6 @@ int main()
 {
     std::cout << "Star Traveller C";
 
-    GameUI::MainMenu mainMenu;
-
-    mainMenu.setMenuOption(GameUI::MenuOption::Options);
-    mainMenu.displayCurrentOption();
-
     terminal_open();
 
     terminal_set("window: size=80x30");

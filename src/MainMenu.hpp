@@ -3,7 +3,7 @@
 #include <array>
 #include <string>
 
-namespace GameUI
+namespace Scenes
 {
     enum MenuOption
     {

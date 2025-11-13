@@ -1,5 +1,5 @@
 #include "SceneHandler.hpp"
 
-GameUI::SceneHandler::SceneHandler()
+Scenes::SceneHandler::SceneHandler()
 {
 }

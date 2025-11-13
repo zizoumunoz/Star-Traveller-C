@@ -1,6 +1,6 @@
 #include "MainMenu.hpp"
 
-using namespace GameUI;
+using namespace Scenes;
 
 MainMenu::MainMenu()
 {
@@ -11,17 +11,17 @@ MainMenu::~MainMenu()
 {
 }
 
-void GameUI::MainMenu::setMenuOption(MenuOption newOption)
+void Scenes::MainMenu::setMenuOption(MenuOption newOption)
 {
     _currentOption = newOption;
 }
 
-void GameUI::MainMenu::displayCurrentOption()
+void Scenes::MainMenu::displayCurrentOption()
 {
     std::cout << _MenuOptions[_currentOption];
 }
 
-void GameUI::MainMenu::displayMenu()
+void Scenes::MainMenu::displayMenu()
 {
     
     

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace GameUI
+namespace Scenes
 {
     enum class SceneType
     {
