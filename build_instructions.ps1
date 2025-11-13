@@ -17,7 +17,9 @@ $debugArgs = @(
     "/EHsc",
     "/Iinclude",                     # tell compiler to look for includes(I) in a folder called include(include)
     "src\main.cpp",
-    "src\MainMenu.cpp",
+    "src\Scenes\MainMenu.cpp",
+    "src\Scenes\Scene.cpp",
+    "src\Scenes\SceneHandler.cpp",
     "/Fe:$debugDir\$Target.exe",
     "/Fo:$debugDir/",
     "/link",                        # indicates linker instruction start
@@ -28,7 +30,9 @@ $releaseArgs = @(
     "/std:c++20",
     "/EHsc",
     "src\main.cpp",
-    ".\src\MainMenu.cpp",
+    "src\Scenes\MainMenu.cpp",
+    "src\Scenes\Scene.cpp",
+    "src\Scenes\SceneHandler.cpp",
     "/Iinclude",
     "/Fe:$releaseDir\$Target.exe",
     "/Fo:$releaseDir/",

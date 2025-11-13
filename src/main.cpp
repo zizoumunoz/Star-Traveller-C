@@ -1,16 +1,18 @@
 #include <iostream>
 #include "BearLibTerminal.h"
-#include "MainMenu.hpp"
+#include "Scenes\MainMenu.hpp"
 
 int main() 
 {
     std::cout << "Star Traveller C";
 
+    Scenes::MainMenu m;
+
     terminal_open();
 
     terminal_set("window: size=80x30");
     
-    
+    m.render();
 
 
     terminal_refresh();

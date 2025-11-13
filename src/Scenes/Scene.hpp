@@ -1,9 +1,13 @@
 #include <string>
-namespace StarTraveller
+#include "BearLibTerminal.h"
+namespace Scenes
 {
     class Scene
     {
     public:
+        Scene(std::string name);
+        virtual ~Scene();
+
         virtual void update() = 0;
         virtual void render() = 0;
 
