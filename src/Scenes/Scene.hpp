@@ -9,7 +9,7 @@ namespace StarTraveller
 
     protected:
         std::string _name;
+
     private:
     };
-
 }
