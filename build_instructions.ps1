@@ -17,6 +17,7 @@ $debugArgs = @(
     "/EHsc",
     "/Iinclude",                     # tell compiler to look for includes(I) in a folder called include(include)
     "/Isrc/Interfaces",
+    "/Isrc/Graphics",
     "src\main.cpp",
     "src\Scenes\MainMenu.cpp",
     "src\Scenes\Scene.cpp",
