@@ -30,9 +30,9 @@ namespace Scenes
         void render() override;
 
         // IHasCursor
-        void moveRelative(int x, int y) override;
-        void setPosition(int x, int y) override;
-        std::pair<int, int> getPosition() override;
+        void cursorMoveRelative(int x, int y) override;
+        void cursorSetPos(int x, int y) override;
+        std::pair<int, int> cursorGetPos() override;
         void renderCursor() override;
 
     private:

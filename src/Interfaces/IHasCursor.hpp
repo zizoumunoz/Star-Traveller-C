@@ -4,9 +4,9 @@ namespace Interfaces
     class IHasCursor
     {
     public:
-        virtual void moveRelative(int x, int y) = 0;
-        virtual void setPosition(int x, int y) = 0;
-        virtual std::pair<int, int> getPosition() = 0;
+        virtual void cursorMoveRelative(int x, int y) = 0;
+        virtual void cursorSetPos(int x, int y) = 0;
+        virtual std::pair<int, int> cursorGetPos() = 0;
         virtual void renderCursor() = 0;
     };
 }

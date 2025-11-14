@@ -19,19 +19,19 @@ void Scenes::MainMenu::render()
     renderCursor();
 }
 
-void Scenes::MainMenu::moveRelative(int x, int y)
+void Scenes::MainMenu::cursorMoveRelative(int x, int y)
 {
     _cursor._coords.first += x;
     _cursor._coords.second += y;
 }
 
-void Scenes::MainMenu::setPosition(int x, int y)
+void Scenes::MainMenu::cursorSetPos(int x, int y)
 {
     _cursor._coords.first = x;
     _cursor._coords.second = y;
 }
 
-std::pair<int, int> Scenes::MainMenu::getPosition()
+std::pair<int, int> Scenes::MainMenu::cursorGetPos()
 {
     return _cursor._coords;
 }
