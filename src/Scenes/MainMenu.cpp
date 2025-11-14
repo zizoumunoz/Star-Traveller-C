@@ -1,4 +1,4 @@
-#include "MainMenu.hpp"
+#include "Scenes/MainMenu.hpp"
 
 Scenes::MainMenu::MainMenu()
     : Scene("Main Menu")

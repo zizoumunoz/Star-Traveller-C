@@ -4,8 +4,8 @@
 #include <string>
 #include <utility>
 #include "Scene.hpp"
-#include "IHasCursor.hpp"
-#include "Cursor.hpp"
+#include "Interfaces/IHasCursor.hpp"
+#include "Graphics/Cursor.hpp"
 
 using namespace Interfaces;
 
