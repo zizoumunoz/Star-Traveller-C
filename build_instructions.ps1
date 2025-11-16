@@ -21,6 +21,7 @@ $debugArgs = @(
     "src\Scenes\Scene.cpp",
     "src\Scenes\SceneHandler.cpp",
     "src\Graphics\Cursor.cpp",
+    "src\Graphics\AsciiHandler.cpp",
     "/Fe:$debugDir\$Target.exe",
     "/Fo:$debugDir/",
     "/link",                        # indicates linker instruction start
