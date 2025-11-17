@@ -9,10 +9,7 @@ int main()
     std::cout << "Star Traveller C\n";
     std::cout << "Working directory: " << std::filesystem::current_path() << '\n';
 
-    Scenes::MainMenu m;
-    Graphics::AsciiHandler ah;
-
-    ah.loadFromFile("assets\\title_art.txt");
+    Scenes::MainMenu mainMenu;
 
     terminal_open();
     terminal_set("window: size=128x36");
@@ -21,9 +18,8 @@ int main()
 
     while (isRunning)
     {
-        m.render();
-        ah.displayAscii(2, 2);
-        terminal_print(1, 2, "The quick brown fox jumps over the lazy dog");
+        mainMenu.render();
+
         terminal_refresh();
 
         if (terminal_read() == TK_ESCAPE)

@@ -6,6 +6,7 @@
 #include "Scene.hpp"
 #include "Interfaces/IHasCursor.hpp"
 #include "Graphics/Cursor.hpp"
+#include "Graphics/AsciiHandler.hpp"
 
 using namespace Interfaces;
 
@@ -38,6 +39,7 @@ namespace Scenes
     private:
         Graphics::Cursor _cursor =
             Graphics::Cursor('>', false, std::make_pair(0, 0));
+        Graphics::AsciiHandler _titleAscii;
     };
 
 }

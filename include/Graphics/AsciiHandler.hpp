@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <fstream>
 #include <iostream>
@@ -11,6 +12,7 @@ namespace Graphics
     public:
         void loadFromFile(std::string fileName);
         void displayAscii(int x, int y);
+
     private:
         std::string _asciiData;
     };

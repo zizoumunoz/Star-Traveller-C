@@ -3,6 +3,7 @@
 Scenes::MainMenu::MainMenu()
     : Scene("Main Menu")
 {
+    _titleAscii.loadFromFile("assets\\title_art.txt");
 }
 
 Scenes::MainMenu::~MainMenu()
@@ -15,6 +16,14 @@ void Scenes::MainMenu::update()
 
 void Scenes::MainMenu::render()
 {
+    /*
+  To do
+  1. Display title
+  2. display menu options
+  3. have moving cursor
+  4. Read input to exit program
+  */
+    _titleAscii.displayAscii(10, 2);
 }
 
 void Scenes::MainMenu::cursorMoveRelative(int x, int y)
