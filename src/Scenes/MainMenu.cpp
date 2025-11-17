@@ -15,8 +15,6 @@ void Scenes::MainMenu::update()
 
 void Scenes::MainMenu::render()
 {
-    terminal_print(1, 2, "Main Menu Scene");
-    renderCursor();
 }
 
 void Scenes::MainMenu::cursorMoveRelative(int x, int y)
