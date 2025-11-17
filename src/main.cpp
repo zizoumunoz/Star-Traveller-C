@@ -13,26 +13,21 @@ int main()
     Graphics::AsciiHandler ah;
 
     ah.loadFromFile("assets\\title_art.txt");
-    
-    terminal_open();
-    
-    terminal_set("window: size=80x30");
-    
-    m.render();
-    ah.displayAscii(2, 2);
 
-    terminal_refresh();
-    terminal_read();
+    terminal_open();
+    terminal_set("window: size=80x30");
+
+    bool isRunning = true;
+
+    while (isRunning)
+    {
+        m.render();
+        ah.displayAscii(2, 2);
+        terminal_refresh();
+        terminal_read();
+    }
 
     terminal_close();
-
-    // terminal_open();
-
-    // terminal_set("window: size=80x25");
-    // terminal_print(2, 1, "Hello, World!");
-    // terminal_refresh();
-    // terminal_read();
-    // terminal_close();
 
     return 0;
 }
