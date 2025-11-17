@@ -15,7 +15,7 @@ int main()
     ah.loadFromFile("assets\\title_art.txt");
 
     terminal_open();
-    terminal_set("window: size=80x30");
+    terminal_set("window: size=128x36");
 
     bool isRunning = true;
 
@@ -23,6 +23,7 @@ int main()
     {
         m.render();
         ah.displayAscii(2, 2);
+        terminal_print(1, 2, "The quick brown fox jumps over the lazy dog");
         terminal_refresh();
         
         if (terminal_read() == TK_ESCAPE)

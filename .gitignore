@@ -1,7 +1,7 @@
 /.vscode/
 
 # build dir
-/build/
+build/debug/AsciiHandler.obj
 
 *.exe
 *.obj
