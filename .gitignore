@@ -1,0 +1,9 @@
+/.vscode/
+
+# build dir
+/build/
+
+*.exe
+*.obj
+*.pbd
+*.idb
