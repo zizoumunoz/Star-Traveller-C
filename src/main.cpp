@@ -24,7 +24,12 @@ int main()
         m.render();
         ah.displayAscii(2, 2);
         terminal_refresh();
-        terminal_read();
+        
+        if (terminal_read() == TK_ESCAPE)
+        {
+            isRunning = false;
+        }
+        
     }
 
     terminal_close();
