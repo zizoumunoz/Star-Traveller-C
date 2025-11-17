@@ -25,12 +25,11 @@ int main()
         ah.displayAscii(2, 2);
         terminal_print(1, 2, "The quick brown fox jumps over the lazy dog");
         terminal_refresh();
-        
+
         if (terminal_read() == TK_ESCAPE)
         {
             isRunning = false;
         }
-        
     }
 
     terminal_close();
