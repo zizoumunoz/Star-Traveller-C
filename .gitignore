@@ -7,3 +7,10 @@ build/debug/AsciiHandler.obj
 *.obj
 *.pbd
 *.idb
+build/debug/AsciiHandler.obj
+build/debug/Cursor.obj
+build/debug/main.obj
+build/debug/MainMenu.obj
+build/debug/Scene.obj
+build/debug/SceneHandler.obj
+build/debug/StarTravellerC.exe
