@@ -3,7 +3,7 @@
 namespace Logic
 {
 
-    enum class SceneTypes
+    enum class SceneType
     {
         MainMenu,
         Inventory,
@@ -14,10 +14,11 @@ namespace Logic
     class Game
     {
     public:
-        void change Scnene
+        void changeScene(SceneType newScene);
         void update();
-        void render();      
+        void render();
 
     private:
+        SceneType _currentScene = SceneType::MainMenu;
     };
 }
