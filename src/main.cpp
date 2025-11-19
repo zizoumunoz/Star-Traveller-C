@@ -7,7 +7,8 @@
 int main()
 {
     std::cout << "Star Traveller C\n";
-    std::cout << "Working directory: " << std::filesystem::current_path() << '\n';
+    std::cout << "Working directory: "
+              << std::filesystem::current_path() << '\n';
 
     Scenes::MainMenu mainMenu;
 
