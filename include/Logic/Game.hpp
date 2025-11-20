@@ -22,6 +22,7 @@ namespace Logic
         void changeScene(SceneType newScene);
         void update();
         void render();
+        void run();
 
     private:
         SceneType _currentSceneType = SceneType::MainMenu;
