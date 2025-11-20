@@ -4,6 +4,26 @@ Logic::Game::Game()
 {
 }
 
+void Logic::Game::changeScene(SceneType newScene)
+{
+    switch (newScene)
+    {
+    case Logic::SceneType::MainMenu:
+        _currentScene = std::make_unique<Scenes::MainMenu>();
+        break;
+    case Logic::SceneType::Inventory:
+        break;
+    case Logic::SceneType::Map:
+        break;
+    case Logic::SceneType::Settings:
+        break;
+    case Logic::SceneType::World:
+        break;
+    default:
+        break;
+    }
+}
+
 void Logic::Game::update()
 {
 }

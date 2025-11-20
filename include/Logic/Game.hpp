@@ -11,7 +11,8 @@ namespace Logic
         MainMenu,
         Inventory,
         Settings,
-        Map
+        Map,
+        World
     };
 
     class Game
