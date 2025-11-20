@@ -1,4 +1,7 @@
 #pragma once
+#include <memory>
+#include "Scenes/Scene.hpp"
+#include "Scenes/MainMenu.hpp"
 
 namespace Logic
 {
@@ -14,11 +17,15 @@ namespace Logic
     class Game
     {
     public:
+        Game();
+
         void changeScene(SceneType newScene);
         void update();
         void render();
 
     private:
-        SceneType _currentScene = SceneType::MainMenu;
+        SceneType _currentSceneType = SceneType::MainMenu;
+        std::unique_ptr<Scenes::Scene> _currentScene =
+            std::make_unique<Scenes::MainMenu>();
     };
 }
