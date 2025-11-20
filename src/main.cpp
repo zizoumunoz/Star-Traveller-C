@@ -1,7 +1,8 @@
 #include <iostream>
 #include "BearLibTerminal.h"
-#include "Scenes\MainMenu.hpp"
-#include "Graphics\AsciiHandler.hpp"
+#include "Scenes/MainMenu.hpp"
+#include "Logic/Game.hpp"
+#include "Graphics/AsciiHandler.hpp"
 #include <filesystem>
 
 int main()
@@ -10,26 +11,9 @@ int main()
     std::cout << "Working directory: "
               << std::filesystem::current_path() << '\n';
 
-    Scenes::MainMenu mainMenu;
+    Logic::Game game;
 
-    terminal_open();
-    terminal_set("window: size=128x36");
-
-    bool isRunning = true;
-
-    while (isRunning)
-    {
-        mainMenu.render();
-
-        terminal_refresh();
-
-        if (terminal_read() == TK_ESCAPE)
-        {
-            isRunning = false;
-        }
-    }
-
-    terminal_close();
+    game.run();
 
     return 0;
 }
