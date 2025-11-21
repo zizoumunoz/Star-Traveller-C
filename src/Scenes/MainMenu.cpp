@@ -31,6 +31,8 @@ void Scenes::MainMenu::render()
   4. Read input to exit program
   */
     _titleAscii.displayAscii(10, 2);
+    std::cout << _titleAscii.getHeight() << " "
+              << _titleAscii.getLength() << "\n";
     displayOptions();
 }
 
