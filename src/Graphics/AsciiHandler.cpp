@@ -34,6 +34,7 @@ void Graphics::AsciiHandler::loadFromFile(std::string fileName)
 
 }
 
+// needed this because not all utf8 chars are the same size in memory.
 size_t Graphics::AsciiHandler::countUTF8codepoints(std::string line)
 {
     size_t count = 0;
@@ -65,25 +66,6 @@ size_t Graphics::AsciiHandler::countUTF8codepoints(std::string line)
     }
     return count;
 }
-
-/*
-size_t count_utf8_codepoints(const std::string& line) {
-    size_t count = 0;
-    for (size_t i = 0; i < line.size(); ) {
-        unsigned char c = static_cast<unsigned char>(line[i]);
-        size_t char_len = 1;
-
-        if ((c & 0b10000000) == 0) char_len = 1;             // ASCII
-        else if ((c & 0b11100000) == 0b11000000) char_len = 2;
-        else if ((c & 0b11110000) == 0b11100000) char_len = 3;
-        else if ((c & 0b11111000) == 0b11110000) char_len = 4;
-
-        i += char_len;
-        ++count;
-    }
-    return count;
-}
-*/
 
 void Graphics::AsciiHandler::displayAscii(int x, int y)
 {
