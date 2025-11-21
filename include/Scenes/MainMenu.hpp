@@ -26,6 +26,8 @@ namespace Scenes
         MainMenu();
         ~MainMenu();
 
+        void displayOptions();
+
         // Scene
         void update() override;
         void render() override;
@@ -40,6 +42,9 @@ namespace Scenes
         Graphics::Cursor _cursor =
             Graphics::Cursor('>', false, std::make_pair(0, 0));
         Graphics::AsciiHandler _titleAscii;
+        std::array<std::string, 4> _options = {
+            "Start Game", "Settings", "Help", "Exit"};
+        int _titleLeftPadding = 10;
+        int _titleTopPadding = 2;
     };
-
 }
