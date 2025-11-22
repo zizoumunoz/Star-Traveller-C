@@ -39,8 +39,40 @@ void Scenes::MainMenu::update(bool &runningFlag)
             cursorMoveConstrained(0, 1, _optionsXConstraints, _optionsYConstraints);
             break;
         }
+        case TK_ENTER:
+        {
+            switch (_cursor._coords.second)
+            {
+            case MenuOption::StartGame:
+            {
+                std::cout << "Start Game\n";
+                break;
+            }
+            case MenuOption::Options:
+            {
+                std::cout << "Options\n";
+                break;
+            }
+            case MenuOption::Help:
+            {
+                std::cout << "Help\n";
+                break;
+            }
+            case MenuOption::Exit:
+            {
+                std::cout << "Exit\n";
+                break;
+            }
+
+            default:
+                break;
+            }
+            break;
+        }
+
         case TK_ESCAPE:
             runningFlag = false;
+            break;
         default:
             break;
         }
@@ -57,8 +89,6 @@ void Scenes::MainMenu::render()
   */
     terminal_clear();
     _titleAscii.displayAscii(10, 2);
-    std::cout << _titleAscii.getHeight() << " "
-              << _titleAscii.getLength() << "\n";
     displayOptions();
     renderCursor();
     terminal_printf(0, 0,
