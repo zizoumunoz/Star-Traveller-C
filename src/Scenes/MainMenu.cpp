@@ -61,6 +61,7 @@ void Scenes::MainMenu::update(bool &runningFlag)
             case MenuOption::Exit:
             {
                 std::cout << "Exit\n";
+                runningFlag = false;
                 break;
             }
 
