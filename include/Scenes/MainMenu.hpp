@@ -15,7 +15,7 @@ namespace Scenes
 {
     enum MenuOption
     {
-        StartGame,
+        StartGame = 14,
         Options,
         Help,
         Exit
