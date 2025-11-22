@@ -39,18 +39,13 @@ void Logic::Game::run()
     terminal_open();
     terminal_set("window: size=128x36");
 
-    bool isRunning = true;
-
-    while (isRunning)
+    while (_isRunning)
     {
+        
         mainMenu.render();
-
         terminal_refresh();
-
-        if (terminal_read() == TK_ESCAPE)
-        {
-            isRunning = false;
-        }
+        
+        mainMenu.update(_isRunning);    
     }
 
     terminal_close();

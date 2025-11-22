@@ -9,7 +9,7 @@ namespace Scenes
         Scene(std::string name);
         virtual ~Scene();
 
-        virtual void update() = 0;
+        virtual void update(bool &runningFlag) = 0;
         virtual void render() = 0;
 
     protected:
