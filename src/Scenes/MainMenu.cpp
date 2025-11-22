@@ -14,12 +14,37 @@ void Scenes::MainMenu::displayOptions()
 {
     for (int i = 0; i < _options.size(); i++)
     {
-        terminal_printf(0, 0 + i, "%i. %s", i + 1, _options[i]);
+        terminal_printf(_titleLeftPadding, 5 + _titleAscii.getHeight() + i,
+                        "%i. %s", i + 1, _options[i]);
     }
 }
 
-void Scenes::MainMenu::update()
+void Scenes::MainMenu::update(bool &runningFlag)
 {
+    while (terminal_has_input())
+    {
+        int key = terminal_read();
+
+        switch (key)
+        {
+        case TK_UP:
+        case TK_W:
+        {
+            cursorMoveConstrained(0, -1, _optionsXConstrains, _optionsYConstrains);
+            break;
+        }
+        case TK_DOWN:
+        case TK_S:
+        {
+            cursorMoveConstrained(0, 1, _optionsXConstrains, _optionsYConstrains);
+            break;
+        }
+        case TK_ESCAPE:
+            runningFlag = false;
+        default:
+            break;
+        }
+    }
 }
 
 void Scenes::MainMenu::render()
@@ -30,10 +55,14 @@ void Scenes::MainMenu::render()
   3. have moving cursor
   4. Read input to exit program
   */
+    terminal_clear();
     _titleAscii.displayAscii(10, 2);
     std::cout << _titleAscii.getHeight() << " "
               << _titleAscii.getLength() << "\n";
     displayOptions();
+    renderCursor();
+    terminal_printf(0, 0,
+                    "%i, %i", _cursor._coords.first, _cursor._coords.second);
 }
 
 void Scenes::MainMenu::cursorMoveRelative(int x, int y)
@@ -46,6 +75,17 @@ void Scenes::MainMenu::cursorSetPos(int x, int y)
 {
     _cursor._coords.first = x;
     _cursor._coords.second = y;
+}
+
+void Scenes::MainMenu::cursorMoveConstrained(int x, int y,
+                                             std::pair<int, int> xConstrain,
+                                             std::pair<int, int> yConstrain)
+{
+    if (_cursor._coords.second + y >= yConstrain.first &&
+        _cursor._coords.second + y <= yConstrain.second)
+    {
+        cursorMoveRelative(x, y);
+    }
 }
 
 std::pair<int, int> Scenes::MainMenu::cursorGetPos()

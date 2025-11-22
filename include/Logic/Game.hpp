@@ -27,7 +27,11 @@ namespace Logic
 
     private:
         SceneType _currentSceneType = SceneType::MainMenu;
+
         std::unique_ptr<Scenes::Scene> _currentScene =
             std::make_unique<Scenes::MainMenu>();
+        
+        // flags
+        bool _isRunning = true;
     };
 }
