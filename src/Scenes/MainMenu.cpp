@@ -30,13 +30,13 @@ void Scenes::MainMenu::update(bool &runningFlag)
         case TK_UP:
         case TK_W:
         {
-            cursorMoveConstrained(0, -1, _optionsXConstrains, _optionsYConstrains);
+            cursorMoveConstrained(0, -1, _optionsXConstraints, _optionsYConstraints);
             break;
         }
         case TK_DOWN:
         case TK_S:
         {
-            cursorMoveConstrained(0, 1, _optionsXConstrains, _optionsYConstrains);
+            cursorMoveConstrained(0, 1, _optionsXConstraints, _optionsYConstraints);
             break;
         }
         case TK_ESCAPE:

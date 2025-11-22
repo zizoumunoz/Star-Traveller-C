@@ -52,7 +52,7 @@ namespace Scenes
         int _titleLeftPadding = 10;
         int _titleTopPadding = 2;
         int _optionsX = 5;
-        std::pair<int, int> _optionsXConstrains = std::make_pair(0, 0);
-        std::pair<int, int> _optionsYConstrains = std::make_pair(14, 17);
+        std::pair<int, int> _optionsXConstraints = std::make_pair(0, 0);
+        std::pair<int, int> _optionsYConstraints = std::make_pair(14, 17);
     };
 }
