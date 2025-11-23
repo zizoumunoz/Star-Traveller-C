@@ -1,5 +1,6 @@
 namespace Terrains
 {
+    /// @brief Base class for all terrain types.
     class Terrain
     {
         public:
