@@ -16,4 +16,9 @@ Game based on the tabletop RPG Traveller. Made in C++20. This project uses [Bear
 
 ## To-Do  
 
-* Add menu functionality to Scenes::MainMenu
+- [x] Add menu functionality to Scenes::MainMenu
+- [ ] Add World screen
+  - [ ] Chunk generation
+  - [ ] Terrain generation
+- [ ] Add Options screen
+- [ ] Add Help screen

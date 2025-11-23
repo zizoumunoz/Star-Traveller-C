@@ -50,11 +50,13 @@ void Scenes::MainMenu::update(bool &runningFlag)
             }
             case MenuOption::Options:
             {
+                // To do
                 std::cout << "Options\n";
                 break;
             }
             case MenuOption::Help:
             {
+                // To do
                 std::cout << "Help\n";
                 break;
             }
