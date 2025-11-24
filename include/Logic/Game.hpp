@@ -21,8 +21,6 @@ namespace Logic
         Scenes::SceneHandler sceneHandler;
         Scenes::SceneType _currentSceneType = Scenes::SceneType::MainMenu;
 
-        std::unique_ptr<Scenes::Scene> _currentScene =
-            std::make_unique<Scenes::MainMenu>(sceneHandler);
 
     };
 }

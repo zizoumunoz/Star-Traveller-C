@@ -26,12 +26,12 @@ void Logic::Game::changeScene(Scenes::SceneType newScene)
 
 void Logic::Game::update()
 {
-    _currentScene->update(_isRunning);
+    sceneHandler.getCurrentScene()->update(_isRunning);
 }
 
 void Logic::Game::render()
 {
-    _currentScene->render();
+    sceneHandler.getCurrentScene()->render();
 }
 
 void Logic::Game::run()

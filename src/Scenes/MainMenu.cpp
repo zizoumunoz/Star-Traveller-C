@@ -45,7 +45,9 @@ void Scenes::MainMenu::update(bool &runningFlag)
             {
             case MenuOption::StartGame:
             {
-                std::cout << "Start Game\n";
+                std::cout << "Start Game, setting scene to world:\n";
+                _sceneHandler.changeScene(Scenes::SceneType::World);
+                
                 break;
             }
             case MenuOption::Options:

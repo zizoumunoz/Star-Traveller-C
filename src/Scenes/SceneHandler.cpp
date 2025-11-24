@@ -1,5 +1,6 @@
 #include "Scenes/SceneHandler.hpp"
 #include "Scenes/MainMenu.hpp"
+#include "Scenes/World.hpp"
 
 Scenes::SceneHandler::SceneHandler()
 {
@@ -26,7 +27,7 @@ void Scenes::SceneHandler::changeScene(SceneType newScene)
         /* code */
         break;
     case SceneType::World:
-        /* code */
+        _currentScene = std::make_unique<World>(*this);
         break;
 
     default:
