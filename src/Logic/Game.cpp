@@ -26,26 +26,23 @@ void Logic::Game::changeScene(SceneType newScene)
 
 void Logic::Game::update()
 {
+    _currentScene->update(_isRunning);
 }
 
 void Logic::Game::render()
 {
+    _currentScene->render();
 }
 
 void Logic::Game::run()
 {
-    Scenes::MainMenu mainMenu;
-
     terminal_open();
     terminal_set("window: size=128x36");
 
     while (_isRunning)
     {
-        
-        mainMenu.render();
+
         terminal_refresh();
-        
-        mainMenu.update(_isRunning);    
     }
 
     terminal_close();
