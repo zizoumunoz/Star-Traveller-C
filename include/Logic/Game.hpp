@@ -30,7 +30,7 @@ namespace Logic
 
         std::unique_ptr<Scenes::Scene> _currentScene =
             std::make_unique<Scenes::MainMenu>();
-        
+
         // flags
         bool _isRunning = true;
     };
