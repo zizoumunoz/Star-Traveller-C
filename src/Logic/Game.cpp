@@ -41,8 +41,9 @@ void Logic::Game::run()
 
     while (_isRunning)
     {
-
+        render();
         terminal_refresh();
+        update();
     }
 
     terminal_close();
