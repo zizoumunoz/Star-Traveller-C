@@ -3,10 +3,13 @@
 #include "BearLibTerminal.h"
 namespace Scenes
 {
+    // Forward dec
+    class SceneHandler;
+
     class Scene
     {
     public:
-        Scene(std::string name);
+        Scene(std::string name, SceneHandler &sceneHandler);
         virtual ~Scene();
 
         virtual void update(bool &runningFlag) = 0;
@@ -14,6 +17,7 @@ namespace Scenes
 
     protected:
         std::string _name;
+        SceneHandler &_sceneHandler;
 
     private:
     };

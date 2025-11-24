@@ -2,22 +2,22 @@
 
 Logic::Game::Game()
 {
+    sceneHandler.changeScene(Scenes::SceneType::MainMenu);
 }
 
-void Logic::Game::changeScene(SceneType newScene)
+void Logic::Game::changeScene(Scenes::SceneType newScene)
 {
     switch (newScene)
     {
-    case Logic::SceneType::MainMenu:
-        _currentScene = std::make_unique<Scenes::MainMenu>();
+    case Scenes::SceneType::MainMenu:
         break;
-    case Logic::SceneType::Inventory:
+    case Scenes::SceneType::Inventory:
         break;
-    case Logic::SceneType::Map:
+    case Scenes::SceneType::Map:
         break;
-    case Logic::SceneType::Settings:
+    case Scenes::SceneType::Settings:
         break;
-    case Logic::SceneType::World:
+    case Scenes::SceneType::World:
         break;
     default:
         break;

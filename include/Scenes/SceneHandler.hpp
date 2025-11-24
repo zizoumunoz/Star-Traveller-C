@@ -1,12 +1,17 @@
 #pragma once
+#include <memory>
+#include "Scene.hpp"
 
 namespace Scenes
 {
+
     enum class SceneType
     {
         MainMenu,
+        Inventory,
         Settings,
-        Game
+        Map,
+        World
     };
 
     class SceneHandler
@@ -16,9 +21,9 @@ namespace Scenes
         ~SceneHandler();
 
         void changeScene(SceneType newScene);
+        Scene *getCurrentScene();
 
     private:
-        SceneType _currentScene = SceneType::MainMenu;
+        std::unique_ptr<Scene> _currentScene;
     };
-
 }

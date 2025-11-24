@@ -4,6 +4,7 @@
 #include <string>
 #include <utility>
 #include "Scene.hpp"
+#include "SceneHandler.hpp"
 #include "Interfaces/IHasCursor.hpp"
 #include "Graphics/Cursor.hpp"
 #include "Graphics/AsciiHandler.hpp"
@@ -24,7 +25,7 @@ namespace Scenes
     class MainMenu : public Scene, public IHasCursor
     {
     public:
-        MainMenu();
+        MainMenu(SceneHandler &sceneHandler);
         ~MainMenu();
 
         void displayOptions();

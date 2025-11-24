@@ -24,7 +24,7 @@ $buildArgs = @(
     "/Iinclude",
     "src\main.cpp",
     "src\Logic\Game.cpp",
-    "src\Logic\Terrains\Terrain.cpp"
+    "src\Logic\Terrains\Terrain.cpp",
     "src\Scenes\MainMenu.cpp",
     "src\Scenes\Scene.cpp",
     "src\Scenes\SceneHandler.cpp",

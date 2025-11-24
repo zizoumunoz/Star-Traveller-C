@@ -1,7 +1,7 @@
 #include "Scenes/MainMenu.hpp"
 
-Scenes::MainMenu::MainMenu()
-    : Scene("Main Menu")
+Scenes::MainMenu::MainMenu(SceneHandler &sceneHandler)
+    : Scene("Main Menu", sceneHandler)
 {
     _titleAscii.loadFromFile("assets\\title_art.txt");
 }
