@@ -4,6 +4,7 @@ namespace Interfaces
     class IHasCursor
     {
     public:
+        virtual ~IHasCursor() = default;
         virtual void cursorMoveRelative(int x, int y) = 0;
         virtual void cursorSetPos(int x, int y) = 0;
         virtual void cursorMoveConstrained(int x, int y,
