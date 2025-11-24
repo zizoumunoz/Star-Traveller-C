@@ -7,7 +7,7 @@
 
 int main()
 {
-    std::cout << "Star Traveller C\n";
+    std::cout << "Station 93\n";
     std::cout << "Working directory: "
               << std::filesystem::current_path() << '\n';
 
