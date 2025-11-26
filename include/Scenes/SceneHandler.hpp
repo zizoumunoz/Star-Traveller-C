@@ -10,6 +10,7 @@ namespace Scenes
         MainMenu,
         Inventory,
         Settings,
+        Help,
         Map,
         World
     };

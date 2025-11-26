@@ -56,10 +56,10 @@ void Scenes::MainMenu::update(bool &runningFlag)
                 _sceneHandler.changeScene(Scenes::SceneType::Settings);
                 break;
             }
-            case MenuOption::Help:
+            case MenuOption::UserHelp:
             {
-                // To do
                 std::cout << "Help\n";
+                _sceneHandler.changeScene(Scenes::SceneType::Help);
                 break;
             }
             case MenuOption::Exit:

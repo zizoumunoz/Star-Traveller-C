@@ -18,7 +18,7 @@ namespace Scenes
     {
         StartGame = 14,
         Options,
-        Help,
+        UserHelp,
         Exit
     };
 

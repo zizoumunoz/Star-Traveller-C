@@ -30,6 +30,7 @@ $buildArgs = @(
     "src\Scenes\SceneHandler.cpp",
     "src\Scenes\World.cpp",
     "src\Scenes\Settings.cpp",
+    "src\Scenes\Help.cpp",
     "src\Graphics\Cursor.cpp",
     "src\Graphics\AsciiHandler.cpp",
     "/Fe:$selectedDir/$Target.exe",
