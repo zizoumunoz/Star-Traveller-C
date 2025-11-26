@@ -21,6 +21,7 @@ void Scenes::MainMenu::displayOptions()
 
 void Scenes::MainMenu::update(bool &runningFlag)
 {
+    terminal_set("window: size=128x36, title='Station 93 - Main Menu'");
     while (terminal_has_input())
     {
         int key = terminal_read();

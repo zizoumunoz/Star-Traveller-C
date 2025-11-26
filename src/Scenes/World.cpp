@@ -9,6 +9,7 @@ Scenes::World::World(SceneHandler &sceneHandler)
 
 void Scenes::World::update(bool &runningFlag)
 {
+    terminal_set("window: size=128x36, title='Station 93 - World'");
     handleInput();
 }
 
