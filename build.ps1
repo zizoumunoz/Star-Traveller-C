@@ -37,6 +37,7 @@ $buildArgs = @(
     "/Fe:$selectedDir/$Target.exe",
     "/Fo:$debugDir/",
     "/link",
+    "/INCREMENTAL",
     "/LIBPATH:lib",
     "BearLibTerminal.lib"
 
