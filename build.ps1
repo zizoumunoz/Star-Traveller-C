@@ -20,6 +20,7 @@ elseif ($Mode -eq "release") {
 
 $buildArgs = @(
     "/std:c++20",
+    "/MP",                              # enble multiprocessor compiling
     "/EHsc",
     "/Iinclude",
     "src\main.cpp",
