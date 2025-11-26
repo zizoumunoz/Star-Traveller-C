@@ -1,6 +1,7 @@
 #include "Scenes/SceneHandler.hpp"
 #include "Scenes/MainMenu.hpp"
 #include "Scenes/World.hpp"
+#include "Scenes/Settings.hpp"
 
 Scenes::SceneHandler::SceneHandler()
 {
@@ -21,7 +22,7 @@ void Scenes::SceneHandler::changeScene(SceneType newScene)
         /* code */
         break;
     case SceneType::Settings:
-        /* code */
+        _currentScene = std::make_unique<Settings>(*this);
         break;
     case SceneType::Map:
         /* code */

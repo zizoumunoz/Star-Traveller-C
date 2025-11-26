@@ -1,9 +1,12 @@
-#include "Scene.hpp"
+#pragma once
 #include "Interfaces/IHasUserInput.hpp"
+#include "Scene.hpp"
+
+using namespace Interfaces;
 
 namespace Scenes
 {
-    class Settings : public Scene, public Interfaces::IHasUserInput
+    class Settings : public Scene, public IHasUserInput
     {
     public:
         Settings(SceneHandler &sceneHandler);

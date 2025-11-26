@@ -9,6 +9,7 @@ Scenes::Settings::Settings(SceneHandler &sceneHandler)
 
 void Scenes::Settings::update(bool &runningFlag)
 {
+    handleInput();
 }
 
 void Scenes::Settings::render()
