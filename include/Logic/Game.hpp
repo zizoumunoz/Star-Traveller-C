@@ -20,7 +20,5 @@ namespace Logic
         bool _isRunning = true;
         Scenes::SceneHandler sceneHandler;
         Scenes::SceneType _currentSceneType = Scenes::SceneType::MainMenu;
-
-
     };
 }
