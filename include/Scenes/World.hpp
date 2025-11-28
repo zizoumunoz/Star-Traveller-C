@@ -13,6 +13,8 @@ namespace Scenes
         World(SceneHandler &sceneHandler);
         ~World() = default;
 
+        void displayMapViewport();
+
         // Scene overrides
         void update(bool &runningFlag) override;
         void render();

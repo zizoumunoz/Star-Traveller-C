@@ -37,7 +37,8 @@ void Logic::Game::render()
 void Logic::Game::run()
 {
     terminal_open();
-    terminal_set("window: size=128x36, title='Station 93'");
+    terminal_set("window: size=100x50, title='Station 93', cellsize=16x16");
+    terminal_set("0xE000: assets/colored_tilemap_packed.png, size=8x8, resize=16x16");
 
     while (_isRunning)
     {

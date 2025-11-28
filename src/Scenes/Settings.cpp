@@ -9,7 +9,7 @@ Scenes::Settings::Settings(SceneHandler &sceneHandler)
 
 void Scenes::Settings::update(bool &runningFlag)
 {
-    terminal_set("window: size=128x36, title='Station 93 - Settings'");
+    terminal_set("window: size=100x50, title='Station 93 - Settings'");
     handleInput();
 }
 

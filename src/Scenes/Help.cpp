@@ -9,7 +9,7 @@ Scenes::Help::Help(SceneHandler &sceneHandler)
 
 void Scenes::Help::update(bool &runningFlag)
 {
-    terminal_set("window: size=128x36, title='Station 93 - Help'");
+    terminal_set("window: size=100x50, title='Station 93 - Help'");
     handleInput();
 }
 
